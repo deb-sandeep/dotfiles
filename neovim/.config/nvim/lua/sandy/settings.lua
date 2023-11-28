@@ -16,6 +16,7 @@ o.relativenumber = true
 o.numberwidth = 4
 o.signcolumn = 'auto'
 o.cursorline = true
+o.linebreak = true
 
 o.expandtab = true
 o.wrap = true
@@ -63,6 +64,7 @@ g.maplocalleader = ' '
 
 -- Add - to the kyword character set. This is for JoveNotes highlighting
 vim.opt.iskeyword:append( '-' )
+vim.opt.iskeyword:append( '@' )
 
 -- Append fzf path to runtimepath
 vim.opt.rtp:append( '/opt/homebrew/opt/fzf' )
