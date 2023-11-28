@@ -52,9 +52,6 @@ o.jumpoptions = 'stack'
 -- Stable buffer content on window open/close events.
 o.splitkeep = 'screen'
 
--- Improve diff
--- vim.opt.diffopt:append('linematch:60')
-
 -- Smooth scrolling
 o.smoothscroll = true
 
@@ -63,8 +60,7 @@ g.mapleader = ' '
 g.maplocalleader = ' '
 
 -- Add - to the kyword character set. This is for JoveNotes highlighting
-vim.opt.iskeyword:append( '-' )
-vim.opt.iskeyword:append( '@' )
+vim.opt.iskeyword:append( '@-@' )
 
 -- Append fzf path to runtimepath
 vim.opt.rtp:append( '/opt/homebrew/opt/fzf' )
