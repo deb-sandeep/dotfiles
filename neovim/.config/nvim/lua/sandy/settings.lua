@@ -64,3 +64,4 @@ vim.opt.iskeyword:append( '@-@' )
 
 -- Append fzf path to runtimepath
 vim.opt.rtp:append( '/opt/homebrew/opt/fzf' )
+
