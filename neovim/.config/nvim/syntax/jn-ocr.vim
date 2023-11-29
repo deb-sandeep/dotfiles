@@ -6,8 +6,6 @@ if exists("b:current_syntax")
   finish
 endif
 
-echom( 'Loading syntax jn-ocr' )
-
 setlocal foldmethod=expr
 setlocal foldexpr=GetJNOCRFold(v:lnum)
 

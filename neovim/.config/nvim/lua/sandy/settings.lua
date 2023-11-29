@@ -8,13 +8,13 @@ o.termguicolors = true
 o.timeoutlen = 500
 
 -- Number of screen lines to keep above and below the cursor
-o.scrolloff = 8
+o.scrolloff = 1
 
 -- Better editor UI
 o.number = true
 o.relativenumber = true
 o.numberwidth = 4
-o.signcolumn = 'auto'
+o.signcolumn = 'yes:1'
 o.cursorline = true
 o.linebreak = true
 
