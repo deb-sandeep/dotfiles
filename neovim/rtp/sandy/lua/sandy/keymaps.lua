@@ -44,8 +44,5 @@ M('', '<right>', '<nop>')
 
 -- Move line up and down in NORMAL and VISUAL modes
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
-M('n', '<C-j>', '<CMD>move .+1<CR>')
-M('n', '<C-k>', '<CMD>move .-2<CR>')
-M('x', '<C-j>', ":move '>+1<CR>gv=gv")
-M('x', '<C-k>', ":move '<-2<CR>gv=gv")
-
+M('n', '<leader>jj', '<CMD>move .+1<CR>')
+M('n', '<leader>kk', '<CMD>move .-2<CR>')
