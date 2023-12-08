@@ -6,7 +6,11 @@ function! CleanRawFile()
   normal mZ
   let l:chars = col("$")
   %s/\s\+$//e
-  %s/\s\s\+/ /e
+  %s/\s\s/ /g
+  %s/\.\([A-Za-z]\)/ \1/g
+  %s/\s\+\.$/\./
+  %s/\s\+:/:/g
+  %s/\s\+?/?/g
   if (line("'Z") != line(".")) || (l:chars != col("$"))
     echom "Trailing whitespace stripped\n"
   endif
@@ -25,7 +29,8 @@ nnoremap <buffer> <F10> zM
 nnoremap <buffer> <F11> za
 nnoremap <buffer> <F12> zR
 
-nnoremap <buffer> <Bslash> 2dd
+nnoremap <buffer> <Bslash> dd
+nnoremap <buffer> <Bslash><Bslash> 2dd
 nnoremap <buffer> <leader>D :call CleanRawFile()<CR>
 nnoremap <buffer> _ i_<Esc> 
 nnoremap <buffer> - W

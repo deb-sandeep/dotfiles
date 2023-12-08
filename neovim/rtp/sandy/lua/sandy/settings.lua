@@ -5,7 +5,7 @@ local o = vim.o
 o.termguicolors = true
 
 -- Time in milliseconds to wait for a mapped sequence to complete.
-o.timeoutlen = 500
+o.timeoutlen = 250
 
 -- Number of screen lines to keep above and below the cursor
 o.scrolloff = 1
