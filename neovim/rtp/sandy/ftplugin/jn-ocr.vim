@@ -29,8 +29,8 @@ nnoremap <buffer> <F10> zM
 nnoremap <buffer> <F11> za
 nnoremap <buffer> <F12> zR
 
-nnoremap <buffer> <Bslash> dd
-nnoremap <buffer> <Bslash><Bslash> 2dd
+nnoremap <buffer> <Bslash> 2dd
+nnoremap <buffer> <Bslash><Bslash> dd
 nnoremap <buffer> <leader>D :call CleanRawFile()<CR>
 nnoremap <buffer> _ i_<Esc> 
 nnoremap <buffer> - W
