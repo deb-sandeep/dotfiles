@@ -1,3 +1,4 @@
+--
 -- nvim-tree
 -- - Don't resize the window every time a buffer is opened
 require( "nvim-tree" ).setup{
@@ -15,4 +16,10 @@ require( "nvim-tree" ).setup{
 -- <leader>fs opens up live grep args
 vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, { noremap = true })
 
-
+-- Vimtex configuration
+vim.cmd [[
+    let g:vimtex_compiler_latexmk = {
+        \ 'aux_dir' : 'target/temp',
+        \ 'out_dir' : 'target/doc',
+        \}
+]]
