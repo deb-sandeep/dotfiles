@@ -1,6 +1,6 @@
 -- Fix n and N. Keeping cursor in center
-M('n', 'n', 'nzz')
-M('n', 'N', 'Nzz')
+-- M('n', 'n', 'nzz')
+-- M('n', 'N', 'Nzz')
 
 -- Mimic shell movements
 M('i', '<C-E>', '<C-o>$')

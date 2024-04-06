@@ -22,7 +22,7 @@ nnoremap <buffer> <leader>vs :unlet b:did_ftplugin<CR>:so ~/.my/dotfiles/neovim/
 
 nnoremap <buffer> <F1> gewi_<Esc>ea_<Esc>w
 nnoremap <buffer> <F2> gewi_<Esc>eWea_<Esc>w
-nnoremap <buffer> <F3> xf_xw
+nnoremap <buffer> <F3> :w<CR>
 nnoremap <buffer> <F9> :/@section<CR>zt
 nnoremap <buffer> <F7> :?@section<CR>zt
 nnoremap <buffer> <F10> zM
@@ -48,5 +48,9 @@ let @t='0lcwtruej'
 "     This is a dog.
 "     --
 let @f='0lcwfalselly$P€ü€kb€kr$0$o--?falsew'
+
+" Moves the // METANOTE END marker from its current position to 
+" the line the cursor in in.
+let @m='O// METANOTE ENDgg/METANOTE ENDddnzz'
 
 let b:did_ftplugin = 1

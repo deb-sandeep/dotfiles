@@ -6,6 +6,20 @@ if exists("b:current_syntax")
   finish
 endif
 
+setlocal foldmethod=expr
+setlocal foldexpr=GetJNFold(v:lnum)
+
+function! GetJNFold(lnum)
+    if getline(a:lnum) =~ '^//-\+$' || 
+       \ getline(a:lnum) =~ '^@section .*$' ||
+       \ getline(a:lnum) =~ '^subject ' ||
+       \ getline(a:lnum) =~ '^chapterNumber ' ||
+       \ getline(a:lnum) =~ '^chapterName '
+        return '0'
+    endif
+    return '1'
+endfunction
+
 " Keyword definitions
 syn keyword jnFileHeader         subject         nextgroup=jnString          skipwhite
 syn keyword jnFileHeader         chapterNumber   nextgroup=jnDecimal         skipwhite

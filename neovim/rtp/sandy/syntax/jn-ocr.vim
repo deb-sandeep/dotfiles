@@ -183,7 +183,7 @@ hi jnChoiceGrpRHS        guifg='#6dc98c'
 "----------------------------------------------------------------------------------
 syn region jnAsIsBlock start='^@as-is' end='^--$'
 
-hi jnAsIsBlock guifg='#a4a5a6'
+hi jnAsIsBlock guifg='#6dc98c' guibg='#353535'
 
 " METANOTE and here lines
 "----------------------------------------------------------------------------------
@@ -215,10 +215,16 @@ hi jnBullet guifg=Red gui=bold
 syn match   jnTextDecoratorBoundary '{{' contained
 syn match   jnTextDecoratorBoundary '}}' contained
 syn region  jnTextDecorator contained matchgroup=jnTextDecoratorBoundary start='{{' end='}}\s' end='}}$' contains=jnTextDecoratorCommands
-syn keyword jnTextDecoratorCommands @chem @ichem @math @imath @blue @red @green @table @th @td
+syn keyword jnTextDecoratorCommands @chem @ichem @math @imath @blue @red @green @table @th @td @context
 
 hi jnTextDecoratorBoundary  guifg='DarkRed'
 hi jnTextDecorator          guifg='#a5a5a7'
 hi jnTextDecoratorCommands  guifg='Green' gui=bold
+
+" @rtc markers
+" ---------------------------------------------------------------------------------
+syn keyword jnRTCMarker @rtc @endrtc 
+
+hi jnRTCMarker              guifg='#ffffff' guibg='Green'
 
 let b:current_syntax = "jn-ocr"
