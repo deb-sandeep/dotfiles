@@ -53,4 +53,7 @@ let @f='0lcwfalselly$P€ü€kb€kr$0$o--?falsew'
 " the line the cursor in in.
 let @m='O// METANOTE ENDgg/METANOTE ENDddnzz'
 
+" Makes the current line into a bulleted chemical equation
+let @c='I    * {{@ichem A}}'
+
 let b:did_ftplugin = 1
