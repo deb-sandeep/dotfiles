@@ -46,3 +46,7 @@ M('', '<right>', '<nop>')
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
 M('n', '<leader>jj', '<CMD>move .+1<CR>')
 M('n', '<leader>kk', '<CMD>move .-2<CR>')
+
+-- Syntax refresh
+-- Reference: https://vim.fandom.com/wiki/Fix_syntax_highlighting
+M('n','<leader>sr', ':syntax sync fromstart<CR>')

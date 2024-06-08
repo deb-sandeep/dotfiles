@@ -8,6 +8,10 @@
             {
                 "language": ["plaintex", "tex"],
                 "path": "./snippets/latex.json"
+            },
+            {
+                "language": ["jn-ocr", "jn"],
+                "path": "./snippets/jovenotes.json"
             }
         ]
     }

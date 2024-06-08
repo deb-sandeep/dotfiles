@@ -34,6 +34,7 @@ hi def link jnSectionName        Number
 " Sub-Section header
 "----------------------------------------------------------------------------------
 syn match   jnSubSectionHeader   '^## ' nextgroup=jnSubSectionName skipwhite
+
 syn region  jnSubSectionName     start='.'  end='$' contained
 
 hi jnSubSectionHeader guifg='Orange'
@@ -42,6 +43,7 @@ hi jnSubSectionName   guifg='Orange'
 " Subsub-Section header
 "----------------------------------------------------------------------------------
 syn match   jnSubSubSectionHeader   '^### ' nextgroup=jnSubSubSectionName skipwhite
+
 syn region  jnSubSubSectionName     start='.'  end='$' contained
 
 hi jnSubSubSectionHeader guifg='Green'
@@ -50,6 +52,7 @@ hi jnSubSubSectionName   guifg='Green' gui=italic
 " QA note type
 "----------------------------------------------------------------------------------
 syn keyword jnQANoteType @qa nextgroup=jnQAQuestionText skipwhite
+
 syn region  jnQAQuestionText contained 
       \ start="." end="$"    
       \ contains=jnItalic,jnBold,jnTextDecorator 
@@ -65,6 +68,7 @@ hi jnQAAnswerText   guifg='#00ab9e'
 " ChemEquation note type
 "----------------------------------------------------------------------------------
 syn keyword jnChemEqNoteType @chem_equation nextgroup=jnChemEqText skipwhite
+
 syn region  jnChemEqText contained start="."  end="$"
 
 hi jnChemEqNoteType guifg='#c778dd' gui=bold
@@ -73,9 +77,11 @@ hi jnChemEqText     guifg='#989251'
 " Chem compound note type
 "----------------------------------------------------------------------------------
 syn keyword jnChemCompoundNoteType @chem_compound nextgroup=jnChemCompound skipwhite
+
 syn region  jnChemCompound contained 
       \ start="." end="$"    
       \ nextgroup=jnChemCompoundDetails skipwhite skipnl skipempty
+
 syn region  jnChemCompoundDetails contained 
       \ start="." end="^--$" 
       \ contains=jnItalic,jnBold,jnBullet,jnTextDecorator
@@ -83,6 +89,22 @@ syn region  jnChemCompoundDetails contained
 hi jnChemCompoundNoteType guifg='#c778dd' gui=bold
 hi jnChemCompound         guifg='#c4bb65'
 hi jnChemCompoundDetails  guifg='#00ab9e'
+
+" @def note type
+"----------------------------------------------------------------------------------
+syn keyword jnDefNoteType @def nextgroup=jnDefTerm skipwhite
+
+syn region jnDefTerm contained 
+      \ start="." end="$"    
+      \ nextgroup=jnDefDesc skipwhite skipnl skipempty
+
+syn region jnDefDesc contained 
+      \ start="." end="^--$"    
+      \ contains=jnItalic,jnBold,jnBullet,jnTextDecorator 
+
+hi jnDefNoteType  guifg='#c778dd'
+hi jnDefTerm guifg='#c4bb65' gui=bold
+hi jnDefDesc guifg='#00ab9e'
 
 " @match note type
 "----------------------------------------------------------------------------------
