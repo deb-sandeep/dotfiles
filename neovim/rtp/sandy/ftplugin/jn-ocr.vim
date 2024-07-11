@@ -22,8 +22,7 @@ nnoremap <buffer> <leader>vs :unlet b:did_ftplugin<CR>:so ~/.my/dotfiles/neovim/
 
 nnoremap <buffer> <F1> gewi_<Esc>ea_<Esc>w
 nnoremap <buffer> <F2> gewi_<Esc>eWea_<Esc>w
-nnoremap <buffer> <F3> :w<CR>
-nnoremap <buffer> <F4> vf.mfy?%%<CR> Okp)h0I@fib <Esc>o<Esc>`f
+nmap     <buffer> <F4> vf.mfy?%%<CR> Okp)h0I@fib <Esc>o<Esc>`f
 nnoremap <buffer> <F9> :/@section<CR>zt
 nnoremap <buffer> <F7> :?@section<CR>zt
 nnoremap <buffer> <F10> zM
@@ -38,7 +37,7 @@ nnoremap <buffer> - W
 nnoremap <buffer> = )
 nnoremap <buffer> <A-8> bwi**<Esc>ea**<Esc>w
 
-vnoremap <buffer> <F5> mfy?%%<CR> Okp)h0I@fib <Esc>o<Esc>`f
+vmap     <buffer> <F5> mfy?%%<CR> Okp)h0I@fib <Esc>o<Esc>`f
 
 " Saved macros
 " Turns the current statement into a @true statement

@@ -17,56 +17,47 @@
         ],
         "description": "Variate, Frequenty horizational table with 5 columns."
     },
-    "matrix-2-2": {
-        "prefix": "mat22",
+    "matrix": {
+        "prefix": "mat",
         "body": [
-            "$\\begin{bmatrix*} $1 & $2 \\\\\\ $3 & $4 \\end{bmatrix*}$$0"
+            "\\begin{bmatrix*} $1 \\\\\\ $2 \\end{bmatrix*}$0"
         ],
         "description": "2x2 Matrix"
     },
-    "matrix-2-1": {
-        "prefix": "mat21",
-        "body": [
-            "$\\begin{bmatrix*} $1 \\\\\\ $2 \\end{bmatrix*}$$0"
-        ],
-        "description": "2x1 Matrix"
-    },
-    "matrix-2-1": {
-        "prefix": "mat12",
-        "body": [
-            "$\\begin{bmatrix*} $1 & $2 \\end{bmatrix*}$$0"
-        ],
-        "description": "1x2 Matrix"
-    },
     "cos" : {
         "prefix" : "cos",
-        "body" : [ "\\cos$1 \\theta" ],
+        "body" : [ "\\cos$1 \\theta$0" ],
         "description": "Cos theta"
     },
     "sin" : {
         "prefix" : "sin",
-        "body" : [ "\\sin$1 \\theta" ],
+        "body" : [ "\\sin$1 \\theta$0" ],
         "description": "Sin theta"
     },
     "tan" : {
         "prefix" : "tan",
-        "body" : [ "\\tan$1 \\theta" ],
+        "body" : [ "\\tan$1 \\theta$0" ],
         "description": "Tin theta"
     },
     "sec" : {
         "prefix" : "sec",
-        "body" : [ "\\sec$1 \\theta" ],
+        "body" : [ "\\sec$1 \\theta$0" ],
         "description": "Sec theta"
     },
     "csc" : {
         "prefix" : "csc",
-        "body" : [ "\\mathrm{cosec}$1 \\ \\theta" ],
+        "body" : [ "\\mathrm{cosec}$1 \\ \\theta$0" ],
         "description": "Cosec theta"
     },
     "cot" : {
         "prefix" : "cot",
-        "body" : [ "\\cot$1 \\theta" ],
+        "body" : [ "\\cot$1 \\theta$0" ],
         "description": "Cot theta"
+    },
+    "blank" : {
+        "prefix" : "blank",
+        "body" : [ "\\rule{1.5cm}{0.15mm}" ],
+        "description": "Blank for FIB"
     },
     "table-class-frequency" : {
         "prefix" : "table-class-frequency",
@@ -76,21 +67,44 @@
             "\\renewcommand{\\arraystretch}{1.3}",
             "\\begin{tabularx}{0.5\\textwidth}{| p {3 cm} | X | }",
             "    \\hline",
-            "    \\rowcolor{lightgray!30} ${1:Class} & ${2:Frequency} (\\textit{f}) \\\\\\",
+            "    \\rowcolor{lightgray!30} ${1:Class} & ${2:Frequency} \\\\\\",
             "    \\hline",
-            "    $3 – $4 & $5 \\\\\\",
+            "    \\\\\\",
             "    \\hline",
-            "    $4 – $6 & $7 \\\\\\",
+            "    \\\\\\",
             "    \\hline",
-            "    $6 – $8 & $9 \\\\\\",
+            "    \\\\\\",
             "    \\hline",
-            "    $8 – $10 & $11 \\\\\\",
+            "    \\\\\\",
             "    \\hline",
-            "    $10 – $12 & $13 \\\\\\",
+            "    \\\\\\",
             "    \\hline",
             "\\end{tabularx}",
             "\\end{table}"
         ],
         "description" : "A class frequency table."
+    },
+    "assertion-reason" : {
+        "prefix" : "ass-res",
+        "body" : [
+            "\\item Choose the right option: \\hfill [4]",
+            "",
+            "    \\textbf{Assertion:} ",
+            "",
+            "    \\textbf{Reason:} ",
+            "",
+            "    \\begin{enumerate}[label={\\alph*.}]",
+            "    \\setlength\\itemsep{0em}",
+            "        \\item Both assertion and reason are correct and reason is the",
+            "            correct explanation of assertion.",
+            "        \\item Both assertion and reason are correct but reason is not",
+            "            the correct explanation of assertion.",
+            "        \\item Assertion is correct but reason is not correct.",
+            "        \\item Assertion is incorrect but reason is correct.",
+            "    \\end{enumerate}",
+            "",
+            ""
+        ],
+        "description" : "Assertion reason template"
     }
 }

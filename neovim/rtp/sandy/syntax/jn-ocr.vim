@@ -109,7 +109,7 @@ hi jnDefDesc guifg='#00ab9e'
 " @match note type
 "----------------------------------------------------------------------------------
 syn region jnMatchNoteType
-      \ start="^@match\n" end="^--$"
+      \ start="^@match\s*.*\n" end="^--$"
       \ contains=jnMatchingRowLHS, jnMatchingRowRHS 
       \ skipwhite 
 
@@ -200,6 +200,32 @@ syn region jnChoiceGrpRHS contained
 hi jnChoiceGroupNoteType guifg='#c778dd'
 hi jnChoiceGrpLHS        guifg='#c9906d'
 hi jnChoiceGrpRHS        guifg='#6dc98c'
+
+" @choice_bulk note type
+"----------------------------------------------------------------------------------
+syn region jnChoiceBulkNoteType
+      \ start="^@choice_bulk " end="^--$"
+      \ contains=jnChoiceBulkCategory,jnChoiceBulkChoice
+      \ skipwhite 
+
+syn region jnChoiceBulkCategory contained 
+      \ start="^# " end="$"    
+      \ contains=jnItalic,jnBold,jnTextDecorator 
+      \ skipwhite
+
+syn region jnChoiceBulkChoice contained 
+      \ start="^\* " end="$"    
+      \ contains=jnItalic,jnBold,jnTextDecorator,jnChoiceBulkAlso
+      \ skipwhite
+
+syn region jnChoiceBulkAlso contained
+      \ start="@also " end="$"
+      \ skipwhite
+
+hi jnChoiceBulkNoteType  guifg='#c778dd'
+hi jnChoiceBulkCategory  guifg='#c9906d'
+hi jnChoiceBulkChoice    guifg='#6dc98c'
+hi jnChoiceBulkAlso      guifg='red'
 
 " As-is block
 "----------------------------------------------------------------------------------
