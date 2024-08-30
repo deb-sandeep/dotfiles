@@ -49,6 +49,23 @@ syn region  jnSubSubSectionName     start='.'  end='$' contained
 hi jnSubSubSectionHeader guifg='Green'
 hi jnSubSubSectionName   guifg='Green' gui=italic
 
+" QA multi-line question - note type
+"----------------------------------------------------------------------------------
+syn keyword jnMQANoteType @mqa nextgroup=jnMQAQuestionText skipwhite
+
+syn region  jnMQAQuestionText contained 
+      \ start="." end="^\~\~$"    
+      \ contains=jnItalic,jnBold,jnTextDecorator 
+      \ nextgroup=jnMQAAnswerText skipwhite skipnl skipempty
+
+syn region  jnMQAAnswerText contained 
+      \ start="." end="^--$" 
+      \ contains=jnItalic,jnBold,jnBullet,jnTextDecorator
+
+hi jnMQANoteType     guifg='#c778dd' gui=bold
+hi jnMQAQuestionText guifg='#c4bb65'
+hi jnMQAAnswerText   guifg='#00ab9e'
+
 " QA note type
 "----------------------------------------------------------------------------------
 syn keyword jnQANoteType @qa nextgroup=jnQAQuestionText skipwhite
@@ -263,7 +280,7 @@ hi jnBullet guifg=Red gui=bold
 syn match   jnTextDecoratorBoundary '{{' contained
 syn match   jnTextDecoratorBoundary '}}' contained
 syn region  jnTextDecorator contained matchgroup=jnTextDecoratorBoundary start='{{' end='}}\s' end='}}$' contains=jnTextDecoratorCommands
-syn keyword jnTextDecoratorCommands @chem @ichem @math @imath @blue @red @green @table @th @td @context
+syn keyword jnTextDecoratorCommands @chem @cfig @ichem @math @imath @blue @red @green @table @th @td @context
 
 hi jnTextDecoratorBoundary  guifg='DarkRed'
 hi jnTextDecorator          guifg='#a5a5a7'

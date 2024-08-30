@@ -40,7 +40,7 @@ syn keyword jnNotesType          @exercise
 syn keyword jnNotesType          @match
 syn keyword jnNotesType          @rtc
 syn keyword jnNotesType          @wm
-syn keyword jnNotesAttribute     @options @numOptionsPerRow @numOptionsToShow @mcq_config correct false
+syn keyword jnNotesAttribute     @options @numOptionsPerRow @numOptionsToShow @mcq_config correct false @forwardCaption @reverseCaption
 
 syn match   jnDecimal            '\d\+\.\d\+'
 syn region  jnString             start=+"+     end=+"+    contains=jnItalicsString,jnBoldString,jnFibSlot,jnTextEnhancer
@@ -48,7 +48,7 @@ syn region  jnItalicsString      start='_'     end='_'    contained
 syn region  jnBoldString         start='\*\*'  end='\*\*' contained
 syn region  jnFibSlot            start='{'     end='}'    contained
 syn region  jnTextEnhancer       start='{{'    end='}}'   contained contains=jnTextEnhancerAttr,jnTdTh
-syn keyword jnTextEnhancerAttr   @table @chem @math @ichem @imath
+syn keyword jnTextEnhancerAttr   @table @chem @cfig @math @ichem @imath
 syn keyword jnTdTh               @th @td
 
 hi def link jnFileHeader         Type

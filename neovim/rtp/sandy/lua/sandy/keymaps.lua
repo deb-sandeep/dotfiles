@@ -3,7 +3,8 @@
 -- M('n', 'N', 'Nzz')
 
 -- Map <F3> to save buffer for all file types
-M('', '<F3>', '<CMD>w<CR>')
+M('n', '<F3>', '<CMD>w<CR>')
+M('i', '<F3>', '<ESC><CMD>w<CR>i')
 
 -- Mimic shell movements
 M('i', '<C-E>', '<C-o>$')
