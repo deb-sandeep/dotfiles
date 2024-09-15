@@ -10,5 +10,6 @@ nnoremap <buffer> <F12> zR
 
 ab sub <sub></sub><Esc>5hi
 ab sup <sup></sup><Esc>5hi
+ab teh the
 
 let b:did_ftplugin = 1

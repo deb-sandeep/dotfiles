@@ -27,7 +27,7 @@ syn keyword jnFileHeader         chapterName     nextgroup=jnString          ski
 
 syn keyword jnSection            @section        nextgroup=jnSectionName     skipwhite
 syn region  jnSectionName        start='"'  end='"' contained
-syn match   jnSectionHeader      '//-\+$'
+"syn match   jnSectionHeader      '//-\+$'
 
 syn keyword jnNotesType          @qa
 syn keyword jnNotesType          @fib
@@ -54,7 +54,7 @@ syn keyword jnTdTh               @th @td
 hi def link jnFileHeader         Type
 hi def link jnSection            Type
 hi def link jnSectionName        Number
-hi def link jnSectionHeader      Label
+"hi def link jnSectionHeader      Label
 hi def link jnNotesType          Keyword
 hi def link jnNotesAttribute     Type
 hi def link jnDecimal            Number
@@ -65,6 +65,11 @@ hi def link jnFibSlot            Special
 hi def link jnTextEnhancer       None
 hi def link jnTextEnhancerAttr   Special
 hi def link jnTdTh               Type
+
+" Single line comment
+"----------------------------------------------------------------------------------
+syn match jnSingleLineComment      '^//.*$'
+hi  jnSingleLineComment guifg='#505050'
 
 let b:current_syntax = "jn"
 

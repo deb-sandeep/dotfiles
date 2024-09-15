@@ -7,7 +7,7 @@ function! CleanRawFile()
   let l:chars = col("$")
   %s/\s\+$//e
   %s/\s\s/ /g
-  %s/\.\([A-Za-z]\)/ \1/g
+  "%s/\.\([A-Za-z]\)/ \1/g
   %s/\s\+\.$/\./
   %s/\s\+:/:/g
   %s/\s\+?/?/g
@@ -39,8 +39,12 @@ nnoremap <buffer> <A-8> bwi**<Esc>ea**<Esc>w
 nmap     <buffer> <F4> dt i\\(<Esc>pa\\)<Esc>
 vmap     <buffer> <F4> xi\\(<Esc>pa\\)<Esc>
 
+nmap     <buffer> da( da(x
+nmap     <buffer> da) da)x
+
 ab sub <sub></sub><Esc>5hi
 ab sup <sup></sup><Esc>5hi
+ab teh the
 
 " Saved macros
 " Turns the current statement into a @true statement

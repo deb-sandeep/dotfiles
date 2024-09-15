@@ -21,13 +21,16 @@ endfunction
 
 highlight Normal guifg=Gray
 
+" Single line comment
+"----------------------------------------------------------------------------------
+syn match jnSingleLineComment      '^//.*$'
+hi  jnSingleLineComment guifg='#505050'
+
 " Section header
 "----------------------------------------------------------------------------------
-syn match   jnSectionHeader      '// -\+$|//-\+$'
 syn keyword jnSection            @section nextgroup=jnSectionName skipwhite
 syn region  jnSectionName        start='"' end='"' contained
 
-hi def link jnSectionHeader      Label
 hi def link jnSection            Type
 hi def link jnSectionName        Number
 
