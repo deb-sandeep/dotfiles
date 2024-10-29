@@ -39,9 +39,6 @@ nnoremap <buffer> <A-8> bwi**<Esc>ea**<Esc>w
 nmap     <buffer> <F4> dt i\\(<Esc>pa\\)<Esc>
 vmap     <buffer> <F4> xi\\(<Esc>pa\\)<Esc>
 
-nmap     <buffer> da( da(x
-nmap     <buffer> da) da)x
-
 ab sub <sub></sub><Esc>5hi
 ab sup <sup></sup><Esc>5hi
 ab teh the
@@ -63,7 +60,24 @@ let @f='0lcwfalselly$P€ü€kb€kr$0$o--?falsew'
 " the line the cursor in in.
 let @m='O// METANOTE ENDgg/METANOTE ENDddnzz'
 
-" Makes the current line into a bulleted chemical equation
-let @c='I    * {{@ichem A}}'
+" Transforms the current plus next four lines into @choice format.
+" Before:
+"     1. A Cat
+"     (a) Purrs
+"     (b) Barks
+"     (c) Meows
+"     (d) Huffs
+" After
+"     @choice A Cat
+"     * Purrs
+"     * Barks
+"     * Meows
+"     * Huffs
+"     --
+let @c='ct @choicej0jjjjkllc*3jo--jj0'
+
+" Marks the current line as the correct option in jn-ocr and 
+" shows the next @choice at the start of the screen.
+let @o='A$/choice0ztj'
 
 let b:did_ftplugin = 1

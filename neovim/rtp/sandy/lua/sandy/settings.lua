@@ -63,5 +63,8 @@ g.maplocalleader = ' '
 vim.opt.iskeyword:append( '@-@' )
 
 -- Append fzf path to runtimepath
-vim.opt.rtp:append( '/opt/homebrew/opt/fzf' )
+vim.opt.rtp:append('/opt/homebrew/opt/fzf')
+
+-- Set the WinSeparator to a brighter color so that window split is prominent
+vim.cmd('hi WinSeparator guifg=#808080')
 

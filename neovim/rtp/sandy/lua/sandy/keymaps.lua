@@ -28,6 +28,9 @@ M('n', '<leader><space>', 'i<space><ESC>l')
 -- and enter insert mode
 M('n', '<S-CR>', 'i<CR>')
 
+-- Control enter. Force a new line split at current position 
+M('n', '<C-CR>', 'i<CR><ESC>')
+
 -- Shortcut to yank register
 M({ 'n', 'x' }, '<leader>p', '"0p')
 M({ 'n', 'x' }, '<leader>P', '"0P')
@@ -54,3 +57,9 @@ M('n', '<leader>kk', '<CMD>move .-2<CR>')
 -- Syntax refresh
 -- Reference: https://vim.fandom.com/wiki/Fix_syntax_highlighting
 M('n','<leader>sr', ':syntax sync fromstart<CR>')
+
+-- Split windows with leader-s prefix
+M('n', '<leader>sv', '<C-w>v')
+M('n', '<leader>sh', '<C-w>s')
+M('n', '<leader>snv', '<CMD>vnew<CR>')
+M('n', '<leader>snh', '<C-w>n')

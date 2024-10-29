@@ -1,6 +1,10 @@
--- A handy method to set keymap
+-- A handy method to set and delete keymap
 function M(m, k, v)
     vim.keymap.set(m, k, v, { silent = true })
+end
+
+function D(m, k)
+    vim.keymap.del(m, k, {silent=true})
 end
 
 -- Load the refactored configurations
